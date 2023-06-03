@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Sonic the Hedgehog 2",
+    "poster": "./assets/images/movie-1.png",
+    "movie_link": "./movie-details.html",
+    "video_url": "https://awskibucket3.s3.amazonaws.com/IronMan_Edit_(480p).mp4",
+    "views": "2K",
+    "duration": 122,
+    "rating": 7.8
+  },
+  {
+    "title": "Sanak",
+    "poster": "./assets/images/Sanak.JPG",
+    "movie_link": "./Sanak-Details.html",
+    "video_url": "https://awskibucket3.s3.amazonaws.com/IronMan_Edit_(480p).mp4",
+    "views": "2K",
+    "duration": 122,
+    "rating": 7.8
+  },
+  {
+    "title": "Avengers: Endgame",
+    "poster": "./assets/images/movie-2.png",
+    "movie_link": "./movie-details.html",
+    "video_url": "https://awskibucket3.s3.amazonaws.com/IronMan_Edit_(480p).mp4",
+    "views": "4K",
+    "duration": 181,
+    "rating": 8.4
+  },
+  {
+    "title": "Avengers: Age Of Altron",
+    "poster": "./assets/images/movie-3.png",
+    "movie_link": "./movie-details.html",
+    "video_url": "https://awskibucket3.s3.amazonaws.com/IronMan_Edit_(480p).mp4",
+    "views": "4K",
+    "duration": 181,
+    "rating": 8.4
+  },
+  {
+    "title": "Avengers: The First Avenger",
+    "poster": "./assets/images/movie-4.png",
+    "movie_link": "./movie-details.html",
+    "video_url": "https://awskibucket3.s3.amazonaws.com/IronMan_Edit_(480p).mp4",
+    "views": "4K",
+    "duration": 181,
+    "rating": 8.4
+  },
+  {
+    "title": "Avengers: Civil War",
+    "poster": "./assets/images/movie-5.png",
+    "movie_link": "./movie-details.html",
+    "video_url": "https://awskibucket3.s3.amazonaws.com/IronMan_Edit_(480p).mp4",
+    "views": "4K",
+    "duration": 181,
+    "rating": 8.4
+  },
+  {
+    "title": "Avengers: Civil War",
+    "poster": "./assets/images/movie-6.png",
+    "movie_link": "./movie-details.html",
+    "video_url": "https://awskibucket3.s3.amazonaws.com/IronMan_Edit_(480p).mp4",
+    "views": "4K",
+    "duration": 181,
+    "rating": 8.4
+  },
+  {
+    "title": "Avengers: Civil War",
+    "poster": "./assets/images/movie-7.png",
+    "movie_link": "./movie-details.html",
+    "video_url": "https://awskibucket3.s3.amazonaws.com/IronMan_Edit_(480p).mp4",
+    "views": "4K",
+    "duration": 181,
+    "rating": 8.4
+  },
+  {
+    "title": "Avengers: Civil War",
+    "poster": "./assets/images/movie-8.png",
+    "movie_link": "./movie-details.html",
+    "video_url": "https://awskibucket3.s3.amazonaws.com/IronMan_Edit_(480p).mp4",
+    "views": "4K",
+    "duration": 181,
+    "rating": 8.4
+  }
+]
