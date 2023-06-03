@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Guy 2021</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="#movies">
+
+<section class="top-rated">
+    <div class="container">
+
+      <p class="section-subtitle">Online Streaming</p>
+
+      <h2 class="h2 section-title">Top Rated Movies</h2>
+
+      <ul class="filter-list">
+
+        <li>
+          <button class="filter-btn">Movies</button>
+        </li>
+
+        <li>
+          <button class="filter-btn">TV Shows</button>
+        </li>
+
+        <li>
+          <button class="filter-btn">Documentary</button>
+        </li>
+
+        <li>
+          <button class="filter-btn">Sports</button>
+        </li>
+
+      </ul>
+
+      <ul id="movieList" class="movies-list">
+
+        <!-- <li>
+          <div class="movie-card">
+
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/movie-1.png" alt="Sonic the Hedgehog 2 movie poster">
+              </figure>
+            </a>
+
+            <div class="title-wrapper">
+              <a href="./movie-details.html">
+                <h3 class="card-title">Sonic the Hedgehog 2</h3>
+              </a>
+
+              <time datetime="2022">2022</time>
+            </div>
+
+            <div class="card-meta">
+              <div class="badge badge-outline">2K</div>
+
+              <div class="duration">
+                <ion-icon name="time-outline"></ion-icon>
+
+                <time datetime="PT122M">122 min</time>
+              </div>
+
+              <div class="rating">
+                <ion-icon name="star"></ion-icon>
+
+                <data>7.8</data>
+              </div>
+            </div>
+
+          </div>
+        </li> -->
+        
+
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- 
+    - custom js link
+  -->
+  <!-- <script src="./assets/js/script.js"></script> -->
+
+  <!-- 
+    - ionicon link
+  -->
+  <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+ 
+ 
+ 
+  <script>
+    fetch('movies.json')
+      .then(response => response.json())
+      .then(data => {
+        // Assuming the data in the movies.json file is an array of movie objects
+        data.forEach(movie => {
+          // Create <li> element
+          var li = document.createElement("li");
+    
+          // Create <div class="movie-card"> element
+          var movieCardDiv = document.createElement("div");
+          movieCardDiv.className = "movie-card";
+    
+          // Create <a> element with href="./movie-details.html"
+          var a1 = document.createElement("a");
+          a1.href = movie.movie_link;
+    
+          // Create <figure class="card-banner"> element
+          var figure = document.createElement("figure");
+          figure.className = "card-banner";
+    
+          // Create <img> element with src="./assets/images/movie-1.png" and alt="Sonic the Hedgehog 2 movie poster"
+          var img = document.createElement("img");
+          img.src = movie.poster;
+          img.alt = movie.title + " movie poster";
+    
+          // Append <img> to <figure>
+          figure.appendChild(img);
+    
+          // Append <figure> to <a1>
+          a1.appendChild(figure);
+    
+          // Append <a1> to <div class="movie-card">
+          movieCardDiv.appendChild(a1);
+    
+          // Create <div class="title-wrapper"> element
+          var titleWrapperDiv = document.createElement("div");
+          titleWrapperDiv.className = "title-wrapper";
+    
+          // Create another <a> element with href="./movie-details.html"
+          var a2 = document.createElement("a");
+          a2.href = "./movie-detailhtml";
+    
+          // Create <h3 class="card-title"> element
+          var h3 = document.createElement("h3");
+          h3.className = "card-title";
+          h3.textContent = movie.title;
+    
+          // Append <h3> to <a2>
+          a2.appendChild(h3);
+    
+          // Append <a2> to <div class="title-wrapper">
+          titleWrapperDiv.appendChild(a2);
+    
+          // Create <time datetime="2022"> element
+          var time = document.createElement("time");
+          time.datetime = "2022";
+          time.textContent = "2022";
+    
+          // Append <time> to <div class="title-wrapper">
+          titleWrapperDiv.appendChild(time);
+    
+          // Append <div class="title-wrapper"> to <div class="movie-card">
+          movieCardDiv.appendChild(titleWrapperDiv);
+    
+          // Create <div class="card-meta"> element
+          var cardMetaDiv = document.createElement("div");
+          cardMetaDiv.className = "card-meta";
+    
+          // Create <div class="badge badge-outline"> element
+          var badgeDiv = document.createElement("div");
+          badgeDiv.className = "badge badge-outline";
+          badgeDiv.textContent = movie.views;
+    
+          // Append <div class="badge badge-outline"> to <div class="card-meta">
+          cardMetaDiv.appendChild(badgeDiv);
+    
+          // Create <div class="duration"> element
+          var durationDiv = document.createElement("div");
+          durationDiv.className = "duration";
+    
+          // Create <ion-icon name="time-outline"></ion-icon>
+          var ionIcon = document.createElement("ion-icon");
+          ionIcon.name = "time-outline";
+    
+          // Create <time datetime="PT122M"> element
+          var time2 = document.createElement("time");
+          time2.datetime = "PT" + movie.duration + "M";
+          time2.textContent = movie.duration + " min";
+    
+               // Append <ion-icon> and <time> to <div class="duration">
+      durationDiv.appendChild(ionIcon);
+      durationDiv.appendChild(time2);
+
+      // Append <div class="duration"> to <div class="card-meta">
+      cardMetaDiv.appendChild(durationDiv);
+
+      // Create <div class="rating"> element
+      var ratingDiv = document.createElement("div");
+      ratingDiv.className = "rating";
+
+      // Create <ion-icon name="star"></ion-icon> element
+      var ionIconStar = document.createElement("ion-icon");
+      ionIconStar.name = "star";
+
+      // Create <data> element
+      var dataElement = document.createElement("data");
+      dataElement.textContent = movie.rating;
+
+      // Append <ion-icon> and <data> to <div class="rating">
+      ratingDiv.appendChild(ionIconStar);
+      ratingDiv.appendChild(dataElement);
+
+      // Append <div class="rating"> to <div class="card-meta">
+      cardMetaDiv.appendChild(ratingDiv);
+
+      // Append <div class="card-meta"> to <div class="movie-card">
+      movieCardDiv.appendChild(cardMetaDiv);
+
+      // Append <div class="movie-card"> to <li>
+      li.appendChild(movieCardDiv);
+
+      // Append <li> to the desired parent element (e.g., a <ul> element with id "movieList")
+      var parentElement = document.getElementById("movieList"); // Replace "movieList" with the actual id of the parent element
+      parentElement.appendChild(li);
+      console.log("a1");
+    });
+  })
+  .catch(error => {
+    console.log('An error occurred:', error);
+  });
+</script>
+
+</body>
+
+</html>
